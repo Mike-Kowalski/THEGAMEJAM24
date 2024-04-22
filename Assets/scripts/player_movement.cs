@@ -75,5 +75,9 @@ public class Player_movement : MonoBehaviour
           
         }
     }
+    public void gameOver()
+    {
+        print("game Over");
+    }
     
 }
