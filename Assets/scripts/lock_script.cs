@@ -2,22 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collectable_script : MonoBehaviour
+public class lock_script : MonoBehaviour
 {
+    key_script KS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        KS = GetComponentInChildren<key_script>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public virtual void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag=="Player")
+        if(KS.locked==false)
         {
             Destroy(gameObject);
         }
