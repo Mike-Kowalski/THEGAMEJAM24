@@ -87,6 +87,10 @@ public class Player_movement : MonoBehaviour
         {
             collect();
         }
+        if(collision.gameObject.tag=="goal")
+        {
+            next_level();
+        }
     }
     public void gameOver()
     {
@@ -103,5 +107,9 @@ public class Player_movement : MonoBehaviour
     public void unlock()
     {
         print("yay unlocked");
+    }
+    public void next_level()
+    {
+        print("next level");
     }
 }
