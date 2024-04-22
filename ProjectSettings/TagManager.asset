@@ -6,6 +6,7 @@ TagManager:
   tags:
   - platform
   - hazard
+  - collectable
   layers:
   - Default
   - TransparentFX
