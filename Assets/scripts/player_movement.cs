@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_movement : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Player_movement : MonoBehaviour
     public float groundCheckRadius;
     public int collectablesTotal;
     public int collectablesCollected;
+    [SerializeField]
+    public int curent_lvl;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +59,6 @@ public class Player_movement : MonoBehaviour
             if (canJump)
             {
                 rb.AddForce(transform.up * jumpDir * jumpPower);
-                //rb.velocity = new Vector2(rb.velocity.y*jumpDir,jumpPower)*Time.deltaTime ;
                 stopJump = false;
                 
             }
@@ -66,7 +68,6 @@ public class Player_movement : MonoBehaviour
             if(jumpTimeCounter>0)
             {
                 rb.AddForce(transform.up * jumpDir * jumpPower);
-                //rb.velocity = new Vector2(rb.velocity.y*jumpDir, jumpPower)*Time.deltaTime;
                 jumpTimeCounter -= Time.deltaTime;
             }
         }
@@ -81,7 +82,7 @@ public class Player_movement : MonoBehaviour
     {
         if(collision.gameObject.tag=="hazard")
         {
-            gameOver();
+       //    gameOver();
         }
         if(collision.gameObject.tag=="collectable")
         {
@@ -89,12 +90,12 @@ public class Player_movement : MonoBehaviour
         }
         if(collision.gameObject.tag=="goal")
         {
-            next_level();
+          //  next_level();
         }
     }
     public void gameOver()
     {
-        print("game Over");
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);      
     }
     public void collect()
     {
@@ -110,6 +111,7 @@ public class Player_movement : MonoBehaviour
     }
     public void next_level()
     {
+        SceneManager.LoadScene(curent_lvl+1,LoadSceneMode.Single);       
         print("next level");
     }
 }
