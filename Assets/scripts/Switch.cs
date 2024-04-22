@@ -9,7 +9,7 @@ public class Switch : MonoBehaviour
 
 
 	// Start is called before the first frame update
-	private bool isAppearing = false; //switch on/off the image (if true is showing, if false is hidden)
+	public bool isAppearing = false; //switch on/off the image (if true is showing, if false is hidden)
 	[SerializeField]
 	public Texture2D[] Images;
 	public Texture2D scaryPicture; //Texture of the image to show
@@ -20,7 +20,7 @@ public class Switch : MonoBehaviour
 	public float timeLimit = 1f; //The time limit the picture have to appear
 
 	// Start is called before the first frame update
-	void Start()
+	public void Start()
 	{
 
 
@@ -28,7 +28,7 @@ public class Switch : MonoBehaviour
 		
 	}
 
-	void Update()
+	public void Update()
 	{
 
 
@@ -53,7 +53,7 @@ public class Switch : MonoBehaviour
 		yield return null;
 	}
 
-	void OnGUI()
+	public void OnGUI()
 	{
 		if (isAppearing)
 		{
