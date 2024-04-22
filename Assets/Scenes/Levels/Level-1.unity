@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &658493700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2432016307373237433, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: locked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7773774
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8462832
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076019573456182173, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719448497062883308, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719448497062883308, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074901482041727931, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
+      propertyPath: m_Name
+      value: goal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18f032aa1dd72e14ca0d20af3374afc5, type: 3}
 --- !u!4 &814888199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4179700398796684116, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
@@ -462,6 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037880969}
   - component: {fileID: 2037880968}
+  - component: {fileID: 2037880970}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -536,6 +606,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2037880970
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037880967}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &2064459507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5419230260106300141, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
@@ -550,3 +665,4 @@ SceneRoots:
   - {fileID: 2037880969}
   - {fileID: 1540493513}
   - {fileID: 848957736}
+  - {fileID: 658493700}

@@ -272,3 +272,7 @@ MonoBehaviour:
   groundCheckRadius: 0.1
   collectablesTotal: 0
   collectablesCollected: 0
+  curent_lvl: 0
+  levels:
+  - Level-1
+  - Level-2
