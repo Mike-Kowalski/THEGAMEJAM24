@@ -268,5 +268,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   stopJump: 0
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0
+  groundCheck: {fileID: 5419230260106300141}
+  groundCheckRadius: 0.1
+  collectablesTotal: 0
+  collectablesCollected: 0
+  curent_lvl: 0
+  levels:
+  - Level-1
+  - Level-2

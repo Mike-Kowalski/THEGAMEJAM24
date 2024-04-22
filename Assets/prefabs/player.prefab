@@ -269,4 +269,10 @@ MonoBehaviour:
     m_Bits: 8
   stopJump: 0
   groundCheck: {fileID: 3268038283280354614}
-  groundCheckRadius: 0
+  groundCheckRadius: 0.1
+  collectablesTotal: 0
+  collectablesCollected: 0
+  curent_lvl: 0
+  levels:
+  - Level-1
+  - Level-2
