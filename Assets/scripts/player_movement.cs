@@ -27,6 +27,7 @@ public class Player_movement : MonoBehaviour
     public int collectablesCollected;
     [SerializeField]
     public int curent_lvl;
+    public string[] levels;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,7 +91,7 @@ public class Player_movement : MonoBehaviour
         }
         if(collision.gameObject.tag=="goal")
         {
-          //  next_level();
+            next_level();
         }
     }
     public void gameOver()
@@ -111,7 +112,7 @@ public class Player_movement : MonoBehaviour
     }
     public void next_level()
     {
-        SceneManager.LoadScene(curent_lvl+1,LoadSceneMode.Single);       
-        print("next level");
+        SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);       
+        
     }
 }
