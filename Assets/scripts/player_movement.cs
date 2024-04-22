@@ -22,6 +22,8 @@ public class Player_movement : MonoBehaviour
     public bool stopJump;
     public Transform groundCheck;
     public float groundCheckRadius;
+    public int collectablesTotal;
+    public int collectablesCollected;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,10 +83,25 @@ public class Player_movement : MonoBehaviour
         {
             gameOver();
         }
+        if(collision.gameObject.tag=="collectable")
+        {
+            collect();
+        }
     }
     public void gameOver()
     {
         print("game Over");
     }
-    
+    public void collect()
+    {
+        collectablesCollected += 1;
+        if (collectablesCollected == collectablesTotal)
+        {
+            unlock();
+        }
+    }
+    public void unlock()
+    {
+        print("yay unlocked");
+    }
 }
