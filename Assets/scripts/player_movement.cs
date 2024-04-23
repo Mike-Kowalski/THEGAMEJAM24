@@ -135,8 +135,14 @@ public class Player_movement : MonoBehaviour
     {
         enteries.level_cleared +=1;
         file_handler.saveToJson<Save_Class>(enteries, fileName);
-        
-        SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);              
+        if (curent_lvl < 5)
+        {
+            SceneManager.LoadScene(levels[curent_lvl + 1], LoadSceneMode.Single);
+        }
+        else
+        {
+            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        }
     }
    
 }
