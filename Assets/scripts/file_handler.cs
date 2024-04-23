@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+
 using System.Linq;
+
 
 public static class file_handler 
 {
@@ -14,6 +16,7 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
         
         writeFile(getPath(fileName),content);
     }
+
     public static List<T> readFromJson<T>(string fileName)
     {
         string content = readFile(getPath(fileName));
@@ -23,6 +26,11 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
         }
         List<T> res = JsonHelper.FromJson<T>(content).ToList();
         return res;
+
+    public static void readFromJson()
+    {
+    
+
     }
     private static string getPath(string fileName)
     {
@@ -37,6 +45,7 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
             writer.Write(content);
         }
     }
+
     private static string readFile(string path)
     {
         if(File.Exists(path))
@@ -48,6 +57,8 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
             }
             
                 }
+    private static string readFile()
+    {
         return "";
     }
     public static class JsonHelper
@@ -80,3 +91,4 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
     }
 
 }
+
