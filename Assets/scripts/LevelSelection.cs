@@ -10,7 +10,7 @@ public class LevelSelection : MonoBehaviour
     public GameObject levelButtons;
 
     public SceneManager[] levels;
-    public CanvasGroup leveloption1;
+ 
 
     public void Awake()
     {
