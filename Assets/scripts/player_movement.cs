@@ -31,14 +31,17 @@ public class Player_movement : MonoBehaviour
     public int curent_lvl;
     public string[] levels;
     public string fileName;
-    List<Save_Class> enteries = new List<Save_Class>(); 
+    Save_Class enteries = new Save_Class(0,0,0,0); 
    
     // Start is called before the first frame update
     void Start()
     {
         jumpTimeCounter = jumpTime;
         rb = GetComponent<Rigidbody2D>();
-
+        enteries = file_handler.readFromJson<Save_Class>(fileName);
+        collectablesCollected = enteries.collectables_found;
+        enteries.current_level = curent_lvl;
+        file_handler.saveToJson<Save_Class>(enteries,fileName);
     }
 
     // Update is called once per frame
@@ -102,7 +105,7 @@ public class Player_movement : MonoBehaviour
     }
     public void gameOver()
     {
-        enteries.Add(new Save_Class(collectablesCollected, 0, curent_lvl, curent_lvl));
+        enteries.current_level = curent_lvl;
         file_handler.saveToJson<Save_Class>(enteries, fileName);
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);      
     }
@@ -117,7 +120,8 @@ public class Player_movement : MonoBehaviour
         }
         else
         {
-    
+            enteries.collectables_found = collectablesCollected;
+            file_handler.saveToJson<Save_Class>(enteries, fileName);
         }
     }
     public void unlock()
@@ -126,10 +130,10 @@ public class Player_movement : MonoBehaviour
     }
     public void next_level()
     {
-        enteries.Add(new Save_Class(collectablesCollected, 0, curent_lvl+1, curent_lvl));
+        enteries.level_cleared +=1;
         file_handler.saveToJson<Save_Class>(enteries, fileName);
         
-        //SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);              
+        SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);              
     }
    
 }

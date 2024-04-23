@@ -5,62 +5,56 @@ using System.IO;
 using System;
 
 using System.Linq;
+using JetBrains.Annotations;
 
-
-public static class file_handler 
+public static class file_handler
 {
-public static void saveToJson<T>(List<T> tosave,string fileName)
+    public static void saveToJson<T>(T tosave, string fileName)
     {
         Debug.Log(getPath(fileName));
-        string content = JsonHelper.ToJson<T>(tosave.ToArray());
-        
-        writeFile(getPath(fileName),content);
+        string content = JsonUtility.ToJson(tosave);
+
+        writeFile(getPath(fileName), content);
     }
 
-    public static List<T> readFromJson<T>(string fileName)
+    public static T readFromJson<T>(string fileName)
     {
         string content = readFile(getPath(fileName));
-        if(string.IsNullOrEmpty(content)||content=="{ }")
+        if (string.IsNullOrEmpty(content) || content == "{ }")
         {
-            return new List<T>();
+            return default(T);
         }
-        List<T> res = JsonHelper.FromJson<T>(content).ToList();
+        T res = JsonUtility.FromJson<T>(content);
         return res;
-
-    public static void readFromJson()
-    {
-    
-
     }
-    private static string getPath(string fileName)
-    {
-        return Application.persistentDataPath+"/"+fileName;
-    }
-    private static void writeFile(string path,string content)
-    {
-        FileStream fileStream = new FileStream(path, FileMode.Create);
-
-        using (StreamWriter writer =new StreamWriter(fileStream))
+       
+        static string getPath(string fileName)
         {
-            writer.Write(content);
+            return Application.persistentDataPath + "/" + fileName;
         }
-    }
+        private static void writeFile(string path, string content)
+        {
+            FileStream fileStream = new FileStream(path, FileMode.Create);
+
+            using (StreamWriter writer = new StreamWriter(fileStream))
+            {
+                writer.Write(content);
+            }
+        }
 
     private static string readFile(string path)
     {
-        if(File.Exists(path))
+        if (File.Exists(path))
         {
-            using (StreamReader reader = new StreamReader(path)) 
+            using (StreamReader reader = new StreamReader(path))
             {
                 string content = reader.ReadToEnd();
                 return content;
             }
-            
-                }
-    private static string readFile()
-    {
+        }
         return "";
     }
+           
     public static class JsonHelper
     {
         public static T[] FromJson<T>(string json)
@@ -89,6 +83,6 @@ public static void saveToJson<T>(List<T> tosave,string fileName)
             public T[] Items;
         }
     }
-
 }
+
 
