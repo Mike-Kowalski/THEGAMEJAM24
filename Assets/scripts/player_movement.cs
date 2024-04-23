@@ -1,3 +1,5 @@
+//using Assembly_CSharp;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,11 +30,15 @@ public class Player_movement : MonoBehaviour
     [SerializeField]
     public int curent_lvl;
     public string[] levels;
+    public string fileName;
+    List<Save_Class> enteries = new List<Save_Class>(); 
+   
     // Start is called before the first frame update
     void Start()
     {
         jumpTimeCounter = jumpTime;
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -96,14 +102,22 @@ public class Player_movement : MonoBehaviour
     }
     public void gameOver()
     {
+        enteries.Add(new Save_Class(collectablesCollected, 0, curent_lvl, curent_lvl));
+        file_handler.saveToJson<Save_Class>(enteries, fileName);
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);      
     }
     public void collect()
     {
-        collectablesCollected += 1;
+   
+        collectablesCollected += 1;       
+        
         if (collectablesCollected == collectablesTotal)
         {
             unlock();
+        }
+        else
+        {
+    
         }
     }
     public void unlock()
@@ -112,7 +126,10 @@ public class Player_movement : MonoBehaviour
     }
     public void next_level()
     {
-        SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);       
+        enteries.Add(new Save_Class(collectablesCollected, 0, curent_lvl+1, curent_lvl));
+        file_handler.saveToJson<Save_Class>(enteries, fileName);
         
+        //SceneManager.LoadScene(levels[curent_lvl+1],LoadSceneMode.Single);              
     }
+   
 }
