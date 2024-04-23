@@ -7,7 +7,7 @@ public class MainmenuControll : MonoBehaviour
 {
     
 
-        public CanvasGroup leveloption;
+    public CanvasGroup leveloption;
         public void PlayGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -15,7 +15,13 @@ public class MainmenuControll : MonoBehaviour
 
         }
 
-        public void Level()
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
+
+
+    public void Level()
         {
             leveloption.alpha = 1;
             leveloption.blocksRaycasts = true;
