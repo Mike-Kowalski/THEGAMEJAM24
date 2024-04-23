@@ -904,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
       propertyPath: jumpPower
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
       propertyPath: groundCheck
@@ -933,7 +933,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7927905243897353149, guid: 2b87f1e7d61a49c4588e23a98b065699, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.57
+      value: 49.33
       objectReference: {fileID: 0}
     - target: {fileID: 7927905243897353149, guid: 2b87f1e7d61a49c4588e23a98b065699, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1448,7 +1448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: jumpPower
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: groundCheckRadius
