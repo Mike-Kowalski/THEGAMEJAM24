@@ -126,6 +126,7 @@ public class Player_movement : MonoBehaviour
     }
     public void unlock()
     {
+        SceneManager.LoadScene("easterEggScene", LoadSceneMode.Single);
         print("yay unlocked");
     }
     public void next_level()

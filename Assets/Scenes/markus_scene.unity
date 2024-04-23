@@ -253,11 +253,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!4 &335051789 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3268038283280354614, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-  m_PrefabInstance: {fileID: 721702885}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &721702885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,10 +261,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 230404950472810078, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4179700398796684116, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1
@@ -313,38 +304,6 @@ PrefabInstance:
     - target: {fileID: 5666645854754493380, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: jumpTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: jumpPower
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 335051789}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: platform.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: collectablesTotal
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: levels.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
-      propertyPath: levels.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -488,11 +447,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!4 &2098748424 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5419230260106300141, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-  m_PrefabInstance: {fileID: 7539627775506062951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5324830034346258668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,10 +577,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5190829490587512509, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5775649719018078356, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -667,37 +617,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5929656734165885264, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7770773134799579733, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
       propertyPath: m_Name
       value: player_reverse
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: jumpDir
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: jumpTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: jumpPower
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 2098748424}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: platform.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
