@@ -8,6 +8,7 @@ TagManager:
   - hazard
   - collectable
   - goal
+  - moving_platform
   layers:
   - Default
   - TransparentFX

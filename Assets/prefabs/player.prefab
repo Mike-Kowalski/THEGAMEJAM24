@@ -112,14 +112,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5666645854754493380}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.000015428544, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000017414575, w: 1}
   m_LocalPosition: {x: 0.18219565, y: 0.7177954, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3268038283280354614}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.002}
 --- !u!212 &8098650806182529220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8060518169104068167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,10 +259,10 @@ MonoBehaviour:
   left: 97
   right: 100
   jump: 119
-  jumpPower: 5
+  jumpPower: 3
   jumpDir: 1
   canJump: 0
-  jumpTime: 0.2
+  jumpTime: 0.5
   jumpTimeCounter: 0
   platform:
     serializedVersion: 2
@@ -270,9 +270,14 @@ MonoBehaviour:
   stopJump: 0
   groundCheck: {fileID: 3268038283280354614}
   groundCheckRadius: 0.1
-  collectablesTotal: 0
+  collectablesTotal: 5
   collectablesCollected: 0
   curent_lvl: 0
   levels:
-  - Level-1
-  - Level-2
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+  - Level6
+  fileName: statsFile.json

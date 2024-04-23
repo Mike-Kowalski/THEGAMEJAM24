@@ -43,4 +43,18 @@ public class Moving_platform : MonoBehaviour
         }
         transform.Translate(speedX*Time.deltaTime, speedY*Time.deltaTime, 0);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.collider.transform.SetParent(transform);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag=="Player")
+        {
+            collision.collider.transform.SetParent(null);
+        }
+    }
 }

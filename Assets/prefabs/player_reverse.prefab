@@ -243,7 +243,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8720768175320961838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,14 +259,14 @@ MonoBehaviour:
   left: 97
   right: 100
   jump: 119
-  jumpPower: 300
+  jumpPower: 3
   jumpDir: -1
   canJump: 0
-  jumpTime: 0
+  jumpTime: 0.5
   jumpTimeCounter: 0
   platform:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   stopJump: 0
   groundCheck: {fileID: 5419230260106300141}
   groundCheckRadius: 0.1
@@ -274,5 +274,10 @@ MonoBehaviour:
   collectablesCollected: 0
   curent_lvl: 0
   levels:
-  - Level-1
-  - Level-2
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+  - Level6
+  fileName: statsFile.json
