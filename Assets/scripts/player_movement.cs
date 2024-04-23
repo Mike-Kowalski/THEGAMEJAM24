@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -92,7 +93,7 @@ public class Player_movement : MonoBehaviour
     {
         if(collision.gameObject.tag=="hazard")
         {
-       //    gameOver();
+           gameOver();
         }
         if(collision.gameObject.tag=="collectable")
         {
@@ -102,6 +103,7 @@ public class Player_movement : MonoBehaviour
         {
             next_level();
         }
+        
     }
     public void gameOver()
     {
