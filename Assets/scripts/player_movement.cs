@@ -38,11 +38,7 @@ public class Player_movement : MonoBehaviour
     {
         jumpTimeCounter = jumpTime;
         rb = GetComponent<Rigidbody2D>();
-<<<<<<< Updated upstream
 
-=======
-        
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
