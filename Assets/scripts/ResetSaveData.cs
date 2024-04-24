@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ResetSaveData : MonoBehaviour
 {
     Button ResetButton;
-    Save_Class enteries = new Save_Class(0, 0, 0, 0,false, false, false, false, false, false);
+    Save_Class enteries = new Save_Class(0, 0, 0, 0);
     [SerializeField]
     public string fileName;
     public void ResetData()
