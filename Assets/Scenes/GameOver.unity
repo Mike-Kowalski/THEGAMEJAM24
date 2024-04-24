@@ -890,7 +890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63439be25d347a44799847ec154c265c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leveloption: {fileID: 0}
+  fileName: statsFile.json
+  leveloption: {fileID: 2028104400}
 --- !u!4 &1048869117
 Transform:
   m_ObjectHideFlags: 0
@@ -1484,6 +1485,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1357800345}
-  - {fileID: 1048869117}
   - {fileID: 2028104401}
+  - {fileID: 1048869117}
   - {fileID: 950501391}

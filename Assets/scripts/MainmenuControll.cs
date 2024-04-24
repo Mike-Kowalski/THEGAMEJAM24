@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainmenuControll : MonoBehaviour
 {
-    
+    public string fileName;
+    Save_Class enteries = new(0, 0, 0, 0);
 
-    public CanvasGroup leveloption;
+
+    public Canvas leveloption;
         public void PlayGame()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        enteries = file_handler.readFromJson<Save_Class>(fileName);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + enteries.current_level+1);
             
 
         }
@@ -23,15 +27,15 @@ public class MainmenuControll : MonoBehaviour
 
     public void Level()
         {
-            leveloption.alpha = 1;
-            leveloption.blocksRaycasts = true;
+          //  leveloption.alpha = 1;
+            //leveloption.blocksRaycasts = true;
 
         }
 
         public void Back()
         {
-            leveloption.alpha = 0;
-            leveloption.blocksRaycasts = false;
+            //leveloption.alpha = 0;
+            //leveloption.blocksRaycasts = false;
         }
 
         public void QuitGame()
