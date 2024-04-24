@@ -71,38 +71,6 @@ public class Switch : MonoBehaviour
 
 
 
-	/*
-    public Menu menu;
-    public List<Image> imagesToSwap; // contains all the sprites to loop through
-  
-    IEnumerator SwapSprites()
-    {
-        int num =Random.Range(0, 20);
-       
-        int imageIndex = 0;
-        while (true)
-        {
-            gameObject.GetComponent<SpriteRenderer>().image= imagesToSwap[imageIndex];
-            // ^ replace the sprite
-            imageIndex++;
-            if (imageIndex == imagesToSwap.Count) imageIndex = 0;
-            // ^ loop back to first sprite
-            yield return new WaitForSeconds(num); // adjust this time as desired
-        }
-    }
-
-    public void Update()
-    {
-        if(menu.enabled)
-        {
-            SwapSprites();
-        }
-        else
-        {
-
-        }
-         
-    }*/
 
 
 }
