@@ -33,7 +33,7 @@ public class Player_movement : MonoBehaviour
     public int curent_lvl;
     public string[] levels;
     public string fileName;
-    Save_Class enteries = new (0, 0, 0, 0,false, false, false, false, false, false);
+    Save_Class enteries = new (0, 0, 0, 0);
     [SerializeField]
     public bool upsideDown;
    
