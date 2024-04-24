@@ -25750,6 +25750,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
+      propertyPath: curent_lvl
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720768175320961838, guid: 00df538eabade9148858a8f31b1c8014, type: 3}
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 2064459507}
@@ -26032,6 +26036,10 @@ PrefabInstance:
     - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: jumpPower
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
+      propertyPath: curent_lvl
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8060518169104068167, guid: 0a714cc4c8258e94fb712e446d22f316, type: 3}
       propertyPath: curent_lvl
