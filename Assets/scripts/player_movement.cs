@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Player_movement : MonoBehaviour
 {
+    Animator anim;
     [SerializeField]
     KeyCode left;
     [SerializeField]
@@ -32,17 +33,28 @@ public class Player_movement : MonoBehaviour
     public int curent_lvl;
     public string[] levels;
     public string fileName;
-    Save_Class enteries = new Save_Class(0,0,0,0); 
+    Save_Class enteries = new Save_Class(0,0,0,0);
+    [SerializeField]
+    public bool upsideDown;
    
     // Start is called before the first frame update
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         jumpTimeCounter = jumpTime;
         rb = GetComponent<Rigidbody2D>();
         enteries = file_handler.readFromJson<Save_Class>(fileName);
         collectablesCollected = enteries.collectables_found;
         enteries.current_level = curent_lvl;
         file_handler.saveToJson<Save_Class>(enteries,fileName);
+        if(upsideDown)
+        {
+            anim.SetBool("upsideDown", true);
+        }
+        else
+        {
+            anim.SetBool("upsideDown", false);
+        }
     }
 
     // Update is called once per frame
@@ -58,11 +70,13 @@ public class Player_movement : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.position -=new Vector3 (5, 0, 0)*Time.deltaTime;
+            anim.SetBool("left", true);
         }
         
         if (Input.GetKey(right))
         {
             transform.position += new Vector3(5, 0, 0)*Time.deltaTime;
+            anim.SetBool("left", false);
         }
 
         if (Input.GetKeyDown(jump))
