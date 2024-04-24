@@ -14,7 +14,7 @@ public class MainmenuControll : MonoBehaviour
         {
         enteries = file_handler.readFromJson<Save_Class>(fileName);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + enteries.current_level+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+enteries.current_level+1);
             
 
         }

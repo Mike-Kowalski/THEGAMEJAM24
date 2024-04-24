@@ -149,7 +149,7 @@ public class Player_movement : MonoBehaviour
     {
         enteries.level_cleared +=1;
         file_handler.saveToJson<Save_Class>(enteries, fileName);
-        if (curent_lvl < 5)
+        if (curent_lvl < 3)
         {
             SceneManager.LoadScene(levels[curent_lvl + 1], LoadSceneMode.Single);
         }
