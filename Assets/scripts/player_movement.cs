@@ -40,7 +40,7 @@ public class Player_movement : MonoBehaviour
         jumpTimeCounter = jumpTime;
         rb = GetComponent<Rigidbody2D>();
         enteries = file_handler.readFromJson<Save_Class>(fileName);
-        collectablesCollected = enteries.collectables_found;
+      collectablesCollected = enteries.collectables_found;
         enteries.current_level = curent_lvl;
         file_handler.saveToJson<Save_Class>(enteries,fileName);
     }
