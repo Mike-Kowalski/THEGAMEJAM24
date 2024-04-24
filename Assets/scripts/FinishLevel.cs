@@ -10,7 +10,7 @@ public class FinishLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //SceneController.instance.NextLevel();
+           // SceneController.instance.NextLevel();
             UnlockNewLevel1();
            
         }
