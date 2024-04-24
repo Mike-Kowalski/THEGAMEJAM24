@@ -42,7 +42,7 @@ public class Switch : MonoBehaviour
 	{
 		time += Time.deltaTime * 1;
 
-		while (time > timeLimit)
+		if(time > timeLimit)
 		{
 			isAppearing = true;
 			yield return new WaitForSeconds(imageStayTime);
@@ -51,6 +51,7 @@ public class Switch : MonoBehaviour
 
 		}
 		yield return null;
+		
 	}
 
 	public void OnGUI()
@@ -62,9 +63,10 @@ public class Switch : MonoBehaviour
 
 			int Picture = Random.Range(0, Images.Length);
 			scaryPicture = Images[Picture];
-
+			
 
 			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), scaryPicture);
+			
 		}
 	}
 
