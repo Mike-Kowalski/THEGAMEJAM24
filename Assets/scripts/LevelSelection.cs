@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelSelection : MonoBehaviour
 {
+    public string fileName;
+    Save_Class enteries = new(0, 0, 0, 0);
     public Button[] buttons;
     public GameObject levelButtons;
 
@@ -14,8 +16,10 @@ public class LevelSelection : MonoBehaviour
 
     public void Awake()
     {
+        enteries = file_handler.readFromJson<Save_Class>(fileName);
         ButtonsToArray();
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        int unlockedLevel = enteries.level_cleared; 
+            //PlayerPrefs.GetInt("UnlockedLevel", 1);
         for(int i =- 0; i <unlockedLevel; i++)
         {
             buttons[i].interactable = false;
